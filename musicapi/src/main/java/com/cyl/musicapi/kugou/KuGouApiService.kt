@@ -22,7 +22,7 @@ interface KuGouApiService {
                    @Query("pagesize") pagesize: Int): Observable<KugouSearchMergeInfo>
 
     /**
-     * 获取歌曲信息
+     * 获取歌曲详细信息（带歌词）
      */
     @GET("yy/index.php?r=play/getdata")
     fun getTingSongInfo(@Url hash: String): Observable<KugouSongInfo>
