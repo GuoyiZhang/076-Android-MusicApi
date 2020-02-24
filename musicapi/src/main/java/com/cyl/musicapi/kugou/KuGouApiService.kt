@@ -1,8 +1,10 @@
 package com.cyl.musicapi.kugou
 
+import com.cyl.musicapi.baidu.BaiduSongInfo
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.Url
 
 interface KuGouApiService {
 
@@ -19,5 +21,11 @@ interface KuGouApiService {
     fun queryMerge(@Query("keyword") keyword: String,
                    @Query("page") page: Int,
                    @Query("pagesize") pagesize: Int): Observable<KugouSearchMergeInfo>
+
+    /**
+     * 获取歌曲信息
+     */
+    @GET("yy/index.php?r=play/getdata")
+    fun getTingSongInfo(@Url hash: String): Observable<KugouSongInfo>
 
 }

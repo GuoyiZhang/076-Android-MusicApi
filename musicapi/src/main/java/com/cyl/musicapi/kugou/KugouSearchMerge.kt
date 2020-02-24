@@ -1,10 +1,10 @@
 package com.cyl.musicapi.kugou
 
 data class KugouSearchMergeInfo(
-    val `data`: Data,
-    val errcode: Int,
-    val error: String,
-    val status: Int
+        val `data`: InfoData,
+        val errcode: Int,
+        val error: String,
+        val status: Int
 )
 
 data class Data(
