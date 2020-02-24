@@ -1,6 +1,5 @@
 package com.cyl.musicapi.kugou
 
-import com.cyl.musicapi.baidu.BaiduApiService
 import com.cyl.musicapi.baidu.BaiduSearchMergeInfo
 import io.reactivex.Observable
 import retrofit2.http.GET
