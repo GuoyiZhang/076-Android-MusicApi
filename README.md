@@ -1,19 +1,20 @@
 # MusicApi
 
-[![](https://jitpack.io/v/caiyonglong/musicapi.svg)](https://jitpack.io/#caiyonglong/musicapi)
+[![](https://jitpack.io/v/GuoyiZhang/musicapi.svg)](https://jitpack.io/#GuoyiZhang/musicapi)
 
-- 封装网易云、百度音乐、虾米音乐、QQ音乐Api
+- 封装酷狗音乐、网易云、百度音乐、虾米音乐、QQ音乐Api
 - 通过[DSBridge for Android](https://github.com/wendux/DSBridge-Android) 解决Android跨域问题，Android端解析调用[js音乐API](https://github.com/sunzongzheng/musicApi)的api
 - 增加NeteaseMusicApi接口
-- 具体的接口实现请看[MusicLake](https://github.com/caiyonglong/MusicLake)
+- 具体的接口实现请看[077-Android-ListeningLove](https://github.com/GuoyiZhang/077-Android-ListeningLove)
 
 ## DSbridge使用
 通过BaseApiImpl，调用js方法拼接api请求地址，然后AjaxHandler收到请求地址，再通过okhhtp请求，获取返回数据，然后在回到js组装返回数据。最后返回一个json字符串，在BaseApiImpl 回调方法中gson解析成具体对象。
 
 ## API
-- 百度音乐Api接口定义 : BaiduApiService（具体实现在MusicLake）
-- 网易音乐Api接口定义 : NeteaseApiService（具体实现在MusicLake）
-- 在线歌单Api接口定义 : PlaylistApiService（具体实现在MusicLake）
+- 酷狗音乐Api接口定义 : KugouApiService（具体实现在077-Android-ListeningLove）
+- 百度音乐Api接口定义 : BaiduApiService（具体实现在077-Android-ListeningLove）
+- 网易音乐Api接口定义 : NeteaseApiService（具体实现在077-Android-ListeningLove）
+- 在线歌单Api接口定义 : PlaylistApiService（具体实现在077-Android-ListeningLove）
 - 音乐播放Api接口[app.native.js](musicapi/src/main/assets/dist/app.native.js) : 同PC端Api接口[sunzongzheng/musicApi/dist/app.native.js](https://github.com/sunzongzheng/musicApi/blob/master/dist/app.native.js)
 为了节省时间，减少维护成本，PC端和Android端使用同一api js，使用 DSbridge 解决Android跨域问题， 实现Android js交互。具体接口实现在**BaseApiImpl**，app.native.js 包含的接口如下：
 
@@ -182,7 +183,7 @@ Step 2. Add the dependency
 
 ```gradle
 dependencies {
-	        implementation 'com.github.caiyonglong:musicapi:1.0.3'
+	        implementation 'com.github.GuoyiZhang:076-Android-MusicApi:1.0.7'
 	    }
 ```
 
