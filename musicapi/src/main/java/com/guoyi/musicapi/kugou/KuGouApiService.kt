@@ -1,7 +1,5 @@
 package com.guoyi.musicapi.kugou
 
-import com.guoyi.musicapi.baidu.BaiduApiService
-import com.guoyi.musicapi.baidu.BaiduPlayMv
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Headers
